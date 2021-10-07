@@ -49,6 +49,11 @@ namespace Wba.Oefening.Students.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "StudentsByCourse",
+                    pattern: "courses/{courseid:int}/students",
+                    defaults: new { Controller = "Courses", Action = "GetStudentsByCourseId" }
+                    );
+                endpoints.MapControllerRoute(
                     name:"Courses",
                     pattern:"/Courses",
                     defaults: new {Controller="Courses",Action="Courses" }

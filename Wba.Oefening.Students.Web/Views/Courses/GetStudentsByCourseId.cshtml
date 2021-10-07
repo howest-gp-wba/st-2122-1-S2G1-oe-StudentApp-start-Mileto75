@@ -1,0 +1,16 @@
+﻿@model CoursesGetStudentsByCourseIdViewModel
+<h1>@Model.CourseName</h1>
+<table class="table table-sm table-hover table-primary">
+    <tr>
+        <th>Fullname</th>
+    </tr>
+        @foreach(var student in Model.Students)
+        { 
+            <tr>
+                <td><a href="/Students/@student.Id">
+                    @student.StudentName
+                    </a></td>
+            </tr>
+        }
+</table>
+
