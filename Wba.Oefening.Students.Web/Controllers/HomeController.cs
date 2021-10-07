@@ -11,15 +11,15 @@ namespace Wba.Oefening.Students.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly StudentRepository studentRepository;
-        private readonly CourseRepository courseRepository;
-        private readonly TeacherRepository teacherRepository;
+        private readonly StudentRepository _studentRepository;
+        private readonly CourseRepository _courseRepository;
+        private readonly TeacherRepository _teacherRepository;
 
         public HomeController()
         {
-            studentRepository = new StudentRepository();
-            courseRepository = new CourseRepository();
-            teacherRepository = new TeacherRepository();
+            _studentRepository = new StudentRepository();
+            _courseRepository = new CourseRepository();
+            _teacherRepository = new TeacherRepository();
         }
 
         public IActionResult Index()

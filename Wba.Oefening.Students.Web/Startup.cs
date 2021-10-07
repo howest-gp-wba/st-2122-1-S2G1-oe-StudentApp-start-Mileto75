@@ -49,6 +49,11 @@ namespace Wba.Oefening.Students.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name:"Courses",
+                    pattern:"/Courses",
+                    defaults: new {Controller="Courses",Action="Courses" }
+                    );
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });

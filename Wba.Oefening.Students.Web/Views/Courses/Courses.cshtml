@@ -1,0 +1,14 @@
+﻿@model IEnumerable<CoursesCoursesViewModel>
+
+<h1>Courses</h1>
+<table class="table table-primary table-hover table-responsive-sm">
+    <tr>
+        <th>Course</th>
+    </tr>
+    @foreach(var course in Model)
+    { 
+        <tr>
+            <td><a href="/Courses/@course.Id/students">@course.Title</a></td>
+        </tr>
+    }
+</table>
